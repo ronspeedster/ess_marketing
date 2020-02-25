@@ -8,9 +8,8 @@ if(!isset($_SESSION))
 	$host = 'localhost';
 	$username = 'root';
 	$password = '';
-	$database = 'yujin_bom';
+	$database = 'jhem_ess';
 
 	$mysqli = new mysqli($host,$username,$password,$database) or die(mysql_error($mysqli));
 
 ?>
-

@@ -1,16 +1,14 @@
 <?php
     include("dbh.php");
-    if(isset($_POST['save'])){
-        $item_code = $_POST['item_code'];
-        $description = $_POST['description'];
-        $material = $_POST['material'];
-        $finish = $_POST['finish'];
+    if(isset($_POST['save_city'])){
+        echo $province = $_POST['province'];
+        echo $city = $_POST['city'];
 
-        $mysqli->query("INSERT INTO item (item_code, item_description, material, finish) VALUES('$item_code','$description','$material','$finish' )") or die ($mysqli->error());
+        $mysqli->query("INSERT INTO areas (province, city) VALUES( '$province','$city' ) ") or die ($mysqli->error);
 
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
-        header("location: item.php");
+        header("location: areas.php");
     }
 
     if(isset($_POST['save_sculpture_materials'])){

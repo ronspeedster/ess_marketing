@@ -87,16 +87,19 @@
         Utilities
       </div>
         <!-- Nav Items - Equipments -->
-        <li class="nav-item">
+        <li class="nav-item active">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#equipments" aria-expanded="true" aria-controls="equipments">
                 <i class="fas fa-toolbox"></i>
-                <span>BOM</span>
+                <span>Areas & Products</span>
             </a>
             <div id="equipments" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Customize BOM:</h6>
-                    <a class="collapse-item" href="item.php"><i class="fas fa-plus-square"></i> Add Item</a>
-                    <a class="collapse-item" href="sculpture-materials.php"><i class="fas fa-utensils"></i> Sculpture Materials</a>
+                    <h6 class="collapse-header">Customize Areas:</h6>
+                    <a class="collapse-item" href="areas.php"><i class="fas fa-plus-square"></i> Add Areas</a>
+                    <a class="collapse-item" href="accounts.php"><i class="far fa-user"></i> Add Accounts</a>
+                    <h6 class="collapse-header">Customize Areas:</h6>
+                    <a class="collapse-item" href="products.php"><i class="fas fa-utensils"></i> Add Products</a>
+                    <a class="collapse-item" href="categories.php"><i class="fas fa-certificate"></i> Add Categories</a>
                 </div>
             </div>
         </li>

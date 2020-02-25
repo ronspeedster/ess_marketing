@@ -2,17 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e11efbc-edd2-48a8-bb15-cc8ebd1564d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/asd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/logo-theme-builder.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sculpture_materials_consolidated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo-theme-builder.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo-theme-builder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/item.php" beforeDir="false" afterPath="$PROJECT_DIR$/item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_item.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sculpture-materials.php" beforeDir="false" afterPath="$PROJECT_DIR$/sculpture-materials.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbh.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbh.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forgot-password.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_province.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_violation.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities-animation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities-border.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities-color.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities-other.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +53,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ess_marketing" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -69,6 +87,7 @@
       <workItem from="1582557272141" duration="2629000" />
       <workItem from="1582590785669" duration="3989000" />
       <workItem from="1582600270739" duration="743000" />
+      <workItem from="1582601421680" duration="6218000" />
     </task>
     <servers />
   </component>
