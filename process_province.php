@@ -11,14 +11,14 @@
         header("location: areas.php");
     }
 
-    if(isset($_POST['save_sculpture_materials'])){
-        $item_code = $_POST['item_code'];
-        $sculpture_material = $_POST['sculpture_material'];
-        $item_value = $_POST['item_value'];
 
-        $mysqli->query("INSERT INTO item_sculpture_material (item_id, sculpture_id, item_value) VALUES('$item_code','$sculpture_material','$item_value' )") or die ($mysqli->error());
+    if(isset($_POST['save_location_and_time'])){
+        $area = $_POST['area'];
+        $travel_time = $_POST['travel_time'];
+
+        $mysqli->query("INSERT INTO location_and_time (location, hours) VALUES('$area','$travel_time' )") or die ($mysqli->error());
 
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
-        header("location: sculpture-materials.php");
+        header("location: location_and_time.php");
     }

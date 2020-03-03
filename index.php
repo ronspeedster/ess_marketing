@@ -1,6 +1,10 @@
 <?php
   require_once 'dbh.php';
   include("sidebar.php");
+  $getAccount = $mysqli->query('SELECT * FROM accounts ORDER BY account_name ASC') or die ($mysqli->error);
+  $getCompany = $mysqli->query('SELECT * FROM product
+GROUP BY company_name
+ORDER BY company_name ASC ') or die($mysqli->error);
 ?>
 <title>Dashboard</title>
     <!-- Content Wrapper -->
@@ -39,68 +43,91 @@
 
               <!-- Project Card Example -->
               <div class="card shadow mb-4">
-                  <form action="process_projects.php" method="POST" class="mb-1">
+                  <form action="process_process.php" method="POST" class="mb-1">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Project: </h6><br/> <input type="text" class="form-control" placeholder="PROJECT-001" required>
+                  <h6 class="m-0 font-weight-bold text-primary">Process: </h6><br/> <input type="text" class="form-control" placeholder="ex: D-2020-03-01-N-01" name="process_name"  required>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <label class="float-right"><b>Target Loading Month</b></label>
-                        </div>
-                        <div class="col">
-                            <input type="date" name="tlm" class="form-control">
-                        </div>
-                        <div class="col">
-                            <label class="float-right"><b>Order Date</b></label>
-                        </div>
-                        <div class="col">
-                            <input type="date" name="tlm" class="form-control">
-                        </div>
-                    </div>
-                    <br/>
                       <table class="table">
                           <thead>
                               <tr>
-                                  <th>Item Code</th>
-                                  <th>Remarks</th>
-                                  <th>QTY</th>
-                                  <th>Unit Flanges</th>
-                                  <th>Unit CBM</th>
+                                  <th>Account (Company)</th>
+                                  <th>Product</th>
                               </tr>
                           </thead>
+                          <!-- Form 1 -->
                           <tbody>
                               <tr>
                                   <td>
-                                      <select name="item_code" class="form-control" required>
-                                          <option disabled>ITEM CODE</option>
-                                          <option>SAMPLE</option>
+                                      <select class="form-control" required name="company1">
+                                          <option disabled selected value="">(To) Company</option>
+                                          <?php while($newAccount=$getAccount->fetch_assoc()){ ?>
+                                            <option value="<?php echo $newAccount['id']; ?>"><?php echo $newAccount['id'].$newAccount['account_name']; ?></option>
+                                          <?php } ?>
                                       </select>
                                   </td>
                                   <td>
-                                      <input type="text" class="form-control" name="remarks" placeholder="OK" required>
+                                      <select class="form-control" required name="product1">
+                                          <option disabled selected value="">(From)Products to be generated later</option>
+                                          <?php while($newProduct=$getCompany->fetch_assoc()){ ?>
+                                          <option value="<?php echo $newProduct['id']; ?>"><?php echo $newProduct['company_name']; ?></option>
+                                          <?php } ?>
+                                      </select>
                                   </td>
-                                  <td>
-                                      <input type="text" class="form-control" name="qty" placeholder="1" required>
-                                  </td>
-                                  <td>
-                                      <input type="text" class="form-control" name="unit_flanges" placeholder="1" required>
-                                  </td>
-                                  <td>
-                                      <input type="text" class="form-control" name="unit_cbm" placeholder="1" required>
-                                  </td>
-
-
-
-
                               </tr>
+
+<?php
+//$getAccount = $mysqli->query('SELECT * FROM accounts ORDER BY account_name ASC') or die ($mysqli->error);
+//$getCompany = $mysqli->query('SELECT * FROM product GROUP BY company_name ORDER BY company_name ASC ') or die($mysqli->error);
+?>
+                              <!-- Form 2
                               <tr>
-
+                                  <td>
+                                      <select class="form-control" required name="company2">
+                                          <option disabled selected value="">(To) Company</option>
+                                          <?php while($newAccount=$getAccount->fetch_assoc()){ ?>
+                                              <option value="<?php echo $newAccount['id']; ?>"><?php echo $newAccount['account_name']; ?></option>
+                                          <?php } ?>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <select class="form-control" required name="product2">
+                                          <option disabled selected value="">(From)Products to be generated later</option>
+                                          <?php while($newProduct=$getCompany->fetch_assoc()){ ?>
+                                              <option value="<?php echo $newProduct['id']; ?>"><?php echo $newProduct['company_name']; ?></option>
+                                          <?php } ?>
+                                      </select>
+                                  </td>
                               </tr>
+                              -->
+<?php
+//$getAccount = $mysqli->query('SELECT * FROM accounts ORDER BY account_name ASC') or die ($mysqli->error);
+//$getCompany = $mysqli->query('SELECT * FROM product GROUP BY company_name ORDER BY company_name ASC ') or die($mysqli->error);
+?>
+                              <!-- Form 3
+                              <tr>
+                                  <td>
+                                      <select class="form-control" required name="company3">
+                                          <option disabled selected value="">(To) Company</option>
+                                          <?php while($newAccount=$getAccount->fetch_assoc()){ ?>
+                                              <option value="<?php echo $newAccount['id']; ?>"><?php echo $newAccount['account_name']; ?></option>
+                                          <?php } ?>
+                                      </select>
+                                  </td>
+                                  <td>
+                                      <select class="form-control" required name="product3">
+                                          <option disabled selected value="">(From)Products to be generated later</option>
+                                          <?php while($newProduct=$getCompany->fetch_assoc()){ ?>
+                                              <option value="<?php echo $newProduct['id']; ?>"><?php echo $newProduct['company_name']; ?></option>
+                                          <?php } ?>
+                                      </select>
+                                  </td>
+                              </tr>
+                              -->
                           </tbody>
 
                       </table>
-                    <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save"><i class="far fa-save"></i> Save</button>
+                    <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save_process"><i class="far fa-save"></i> Save</button>
                   </form>
                 </div>
               </div>

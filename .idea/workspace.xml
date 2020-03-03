@@ -2,30 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e11efbc-edd2-48a8-bb15-cc8ebd1564d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/categories.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_account.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/location_and_time.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/print_process.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/print_process2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_process.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/processess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blank.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/buttons.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbh.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbh.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_item.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_province.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_violation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_province.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_province.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/records.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-animation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-border.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-color.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities-other.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +27,20 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -48,6 +51,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -56,6 +60,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\xampp\htdocs\ess_marketing" />
     </key>
   </component>
@@ -69,6 +74,26 @@
           <option name="name" value="StatusDashboardGroupingRule" />
         </RuleState>
       </list>
+    </option>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4e57e396" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4e57e396" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@6ba2de93" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -88,6 +113,7 @@
       <workItem from="1582590785669" duration="3989000" />
       <workItem from="1582600270739" duration="743000" />
       <workItem from="1582601421680" duration="6218000" />
+      <workItem from="1583215496357" duration="16565000" />
     </task>
     <servers />
   </component>

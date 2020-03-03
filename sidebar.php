@@ -96,6 +96,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Customize Areas:</h6>
                     <a class="collapse-item" href="areas.php"><i class="fas fa-plus-square"></i> Add Areas</a>
+                    <a class="collapse-item" href="location_and_time.php"><i class="fas fa-clock"></i> Add Travel Time</a>
                     <a class="collapse-item" href="accounts.php"><i class="far fa-user"></i> Add Accounts</a>
                     <h6 class="collapse-header">Customize Areas:</h6>
                     <a class="collapse-item" href="products.php"><i class="fas fa-utensils"></i> Add Products</a>
@@ -104,6 +105,12 @@
             </div>
         </li>
 
+        <!-- Nav Item - View Processes -->
+        <li class="nav-item active">
+            <a class="nav-link" href="processess.php">
+                <i class="fas fa-eye"></i>
+                <span>View sProcesses</span></a>
+        </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
