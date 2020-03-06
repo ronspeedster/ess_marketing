@@ -109,7 +109,7 @@
         <li class="nav-item active">
             <a class="nav-link" href="processess.php">
                 <i class="fas fa-eye"></i>
-                <span>View sProcesses</span></a>
+                <span>View Processes</span></a>
         </li>
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">

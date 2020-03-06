@@ -7,6 +7,15 @@ GROUP BY company_name
 ORDER BY company_name ASC ') or die($mysqli->error);
 ?>
 <title>Dashboard</title>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#productTable').DataTable(
+            {
+                "pageLength": 100
+            }
+        );
+    } );
+</script>
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -67,15 +76,60 @@ ORDER BY company_name ASC ') or die($mysqli->error);
                                       </select>
                                   </td>
                                   <td>
-                                      <select class="form-control" required name="product1">
+                                      <select class="form-control"  onchange="location = this.value;">
                                           <option disabled selected value="">(From)Products to be generated later</option>
                                           <?php while($newProduct=$getCompany->fetch_assoc()){ ?>
-                                          <option value="<?php echo $newProduct['id']; ?>"><?php echo $newProduct['company_name']; ?></option>
+                                          <option value="index.php?product=<?php echo $newProduct['id']; ?>"><?php echo $newProduct['company_name']; ?></option>
                                           <?php } ?>
                                       </select>
+                                      <?php if(isset($_GET['product'])){
+                                          $product=$_GET['product'];
+                                          ?>
+                                      <input type="text" name="product1" class="form-control" value="<?php echo $product; ?>" required style="visibility: hidden">
+                                      <?php } ?>
                                   </td>
                               </tr>
-
+                          </tbody>
+                      </table>
+                    <?php if(isset($_GET['product'])){
+                        $getProductCompany = $mysqli->query("SELECT * FROM product WHERE id='$product'") or die ($mysqli->error);
+                        $newProductCompany = $getProductCompany->fetch_array();
+                        $productCompany = $newProductCompany['company_name'];
+                        $getProducts = $mysqli->query("SELECT * FROM product WHERE company_name='$productCompany'") or die ($mysqli->error);
+                        $counter=1;
+                        $productIndex = 1;
+                        ?>
+                        <h4><?php echo $productCompany." PRODUCTS"; ?></h4>
+                        <br/>
+                        <table class="table table-bordered" id="productTable">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50%;">Product</th>
+                                    <th>Qty</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <?php while($newProducts = $getProducts->fetch_assoc()){ ?>
+                                <tr>
+                                    <td>
+                                    <input type="hidden" value="0" name="productIndex<?php echo $productIndex; ?>">
+                                    <input type="checkbox" value="1" name="productIndex<?php echo $productIndex; ?>" id="productIndex<?php echo $productIndex; ?>">
+                                    <label for="productIndex<?php echo $productIndex; ?>"><?php echo $newProducts['name']; ?></label>
+                                    <input type="text" value="<?php echo $newProducts['name']; ?>" name="productName<?php echo $productIndex; ?>" style="visibility: hidden;">
+                                    <br/>
+                                    </td>
+                                    <td>
+                                        <input type="number" name="productQty<?php echo $productIndex; ?>" class="form-control" placeholder="0" value="0">
+                                    </td>
+                                </tr>
+                            <?php
+                                $productIndex++;
+                                $counter++;
+                            } ?>
+                            </tbody>
+                            <input type="text" value="<?php echo $counter; ?>" name="counter" style="visibility: hidden;">
+                        </table>
+                    <?php } ?>
 <?php
 //$getAccount = $mysqli->query('SELECT * FROM accounts ORDER BY account_name ASC') or die ($mysqli->error);
 //$getCompany = $mysqli->query('SELECT * FROM product GROUP BY company_name ORDER BY company_name ASC ') or die($mysqli->error);
@@ -123,10 +177,11 @@ ORDER BY company_name ASC ') or die($mysqli->error);
                                       </select>
                                   </td>
                               </tr>
-                              -->
+
                           </tbody>
 
                       </table>
+                      -->
                     <button type="submit" class="btn btn-primary btn-sm mb-1 float-right" name="save_process"><i class="far fa-save"></i> Save</button>
                   </form>
                 </div>

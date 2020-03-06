@@ -47,6 +47,7 @@
                     <table id="dataTable" class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>Process Name</th>
                                 <th>Account Name</th>
                                 <th>Complete Address</th>
@@ -56,6 +57,7 @@
                         <tbody>
                         <?php while($newGetProcess=$getProcess->fetch_assoc()){ ?>
                             <tr>
+                                <td><?php echo $newGetProcess['id']; ?></td>
                                 <td>
                                     <a target="_blank" href="print_process2.php?id=<?php echo $newGetProcess['id']; ?>">
                                     <?php echo $newGetProcess['process_name']; ?>

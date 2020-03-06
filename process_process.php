@@ -5,13 +5,28 @@
     if(isset($_POST['save_process'])){
         $process_name = $_POST['process_name'];
         $company1 = $_POST['company1'];
-        $product1 = $_POST['product1'];
+        echo $product1 = $_POST['product1'];
+        $getCounter = $_POST['counter'];
         /*$company2 = $_POST['company2'];
         $product2 = $_POST['product2'];
         $company3 = $_POST['company3'];
         $product3 = $_POST['product3'];
         */
-
+        $counter=1;
+        $productIndex = 1;
+        $products = '<thead><tr><th>Product</th><th>Qty.</th></th></tr></thead><tbody>';
+        while($counter<$getCounter){
+            if($_POST['productIndex'.$productIndex]==1){
+                $products = $products."<tr><td>".$_POST['productName'.$productIndex]."</td><td>".$_POST['productQty'.$productIndex]."</td></tr></tbody>";
+            }
+            else{
+                // Do nothing
+            }
+            $productIndex++;
+            $counter++;
+        }
+        $convertProducts = htmlspecialchars($products);
+        echo $convertProducts;
 
         $getCompany1 = $mysqli->query("SELECT acc.account_name, acc.complete_address, ar.city, lat.hours, p.province_name FROM accounts acc
 LEFT JOIN areas ar ON acc.areas = ar.id
@@ -145,10 +160,11 @@ WHERE acc.id='$company3'") or die ($mysqli->error());
         $departureDate;
         $companyName = $newProduct1['company_name'];
 
-        $mysqli->query("INSERT INTO process (process_name, process_date, check_inventory, purchase_order, initial_invoicing_order, prepare_the_order, check_prepared_order, final_invoicing_printing, truck_loading, product_company, departure_date, area, complete_address, account_name, arrivalTime, departureTime) VALUES( '$process_name','$processDate','$checkInventory','$purchaseOrder', '$initialInvoicingOrder','$prepareTheOrder','$checkThePreparedOrder','$finalInvoicingAndPrinting','$truckLoading','$companyName','$departureDate','$city','$complete_address','$account_name','$arrivalTime','$departureTime') ") or die ($mysqli->error);
+        $mysqli->query("INSERT INTO process (process_name, process_date, check_inventory, purchase_order, initial_invoicing_order, prepare_the_order, check_prepared_order, final_invoicing_printing, truck_loading, product_company, departure_date, area, complete_address, account_name, arrivalTime, departureTime,products) VALUES( '$process_name','$processDate','$checkInventory','$purchaseOrder', '$initialInvoicingOrder','$prepareTheOrder','$checkThePreparedOrder','$finalInvoicingAndPrinting','$truckLoading','$companyName','$departureDate','$city','$complete_address','$account_name','$arrivalTime','$departureTime','$convertProducts') ") or die ($mysqli->error);
 
         $_SESSION['message'] = "Record has been saved!";
         $_SESSION['msg_type'] = "success";
-        header("location: print_process.php?process_name=".$process_name."&process_date=".$processDate."&check_inventory=".$checkInventory."&purchase_order=".$purchaseOrder."&initial_invoicing_order=".$initialInvoicingOrder."&prepare_the_order=".$prepareTheOrder."&check_prepared_order=".$checkThePreparedOrder."&final_invoicing_printing=".$finalInvoicingAndPrinting."&truck_loading=".$truckLoading."&product_company=".$companyName."&departure_date=".$departureDate."&area=".$city."&complete_address=".$complete_address."&account_name=".$account_name.="&arrivalTime=".$arrivalTime."&departureTime=".$departureTime);
+        //header("location: print_process.php?process_name=".$process_name."&process_date=".$processDate."&check_inventory=".$checkInventory."&purchase_order=".$purchaseOrder."&initial_invoicing_order=".$initialInvoicingOrder."&prepare_the_order=".$prepareTheOrder."&check_prepared_order=".$checkThePreparedOrder."&final_invoicing_printing=".$finalInvoicingAndPrinting."&truck_loading=".$truckLoading."&product_company=".$companyName."&departure_date=".$departureDate."&area=".$city."&complete_address=".$complete_address."&account_name=".$account_name.="&arrivalTime=".$arrivalTime."&departureTime=".$departureTime);
+        header("location: processess.php");
 
     }

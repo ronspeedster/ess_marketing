@@ -20,6 +20,7 @@
   $arrival_time = $newProcess['arrivalTime'];
   $process_date = $newProcess['process_date'];
   $product_company= $newProcess['product_company'];
+  $products = htmlspecialchars_decode($newProcess['products']);
 ?>
 <title>Print Process</title>
     <!-- Content Wrapper -->
@@ -79,7 +80,7 @@
                     Arrival Time: <?php echo $arrival_time; ?><br/><br/>
 
                     <h4>Products:</h4><br/>
-                    <table class="table">
+                    <table class="table" style="display: none;">
                         <thead>
                             <tr>
                                 <th>Product Code</th>
@@ -95,6 +96,11 @@
                             </tr>
                     <?php } ?>
                         </tbody>
+                    </table>
+                    <table class="table table-bordered">
+                    <?php
+                        echo $products;
+                    ?>
                     </table>
                 </div>
               </div>
