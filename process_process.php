@@ -47,7 +47,7 @@ WHERE acc.id='$company3'") or die ($mysqli->error());
         $processTime = date('H:i:s');
         $processTime = strtotime($processTime);
 
-        if($processTime>"11:00"){
+        if($processTime>strtotime(date('11:00:00'))){
             $processDate = new DateTime('+1 day');
             $processDate = $processDate->format('Y-m-d');
 
@@ -74,6 +74,7 @@ WHERE acc.id='$company3'") or die ($mysqli->error());
             $truckLoading1 = strtotime($truckLoading);
         }
         else{
+
             $checkInventory = date('H:i', strtotime('+10 minutes', $processTime ));
             $checkInventory1 = strtotime($checkInventory);
 

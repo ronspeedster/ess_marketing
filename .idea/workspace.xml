@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e11efbc-edd2-48a8-bb15-cc8ebd1564d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/location_and_time.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/print_process.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/print_process2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_process.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/processess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_province.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_province.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/records.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/process_process.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,17 +69,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4e57e396" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4e57e396" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@6ba2de93" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -113,7 +92,8 @@
       <workItem from="1582590785669" duration="3989000" />
       <workItem from="1582600270739" duration="743000" />
       <workItem from="1582601421680" duration="6218000" />
-      <workItem from="1583215496357" duration="16565000" />
+      <workItem from="1583215496357" duration="16671000" />
+      <workItem from="1583454634671" duration="555000" />
     </task>
     <servers />
   </component>
